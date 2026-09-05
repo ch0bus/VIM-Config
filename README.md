@@ -358,7 +358,7 @@ vim models.py views.py serializers.py
 ```
 ### как закрыть сплит
 Закрытие сплита в Vim
-
+```
 Основные способы:
 1. Закрыть текущий сплит
 vim
@@ -412,5 +412,6 @@ vim
 
 nnoremap <C-q> :q<CR>       " Ctrl+q для быстрого закрытия
 nnoremap <Leader>q :only<CR> " ,q для оставления только текущего окна
+```
 
 Тогда просто нажмите Ctrl+q вместо :q + Enter.
