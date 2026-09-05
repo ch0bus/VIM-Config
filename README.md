@@ -1,6 +1,6 @@
 Создайте или отредактируйте файл ~/.vimrc:
 vim
-
+```
 " === Основные настройки ===
 set number                          " Номера строк
 set relativenumber                  " Относительные номера
@@ -69,17 +69,17 @@ autocmd BufWritePre *.py :%s/\s\+$//e
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4
 
 С плагинами (рекомендуется)
-
+```
 Используйте vim-plug для управления плагинами.
 1. Установить vim-plug
-bash
+```bash
 
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
+```
 2. Расширенный ~/.vimrc с плагинами
 vim
-
+```
 " === vim-plug ===
 call plug#begin('~/.vim/plugged')
 
@@ -129,25 +129,28 @@ let g:ctrlp_cmd = 'CtrlP'
 
 " === Python Syntax ===
 let g:python_highlight_all = 1
-
+```
 3. Установить плагины
 bash
-
+```
 vim +PlugInstall +qall
-
-Для Neovim (современная альтернатива)
+```
+# Для Neovim (современная альтернатива)
 
 Если хотите что-то проще, используйте Neovim с init.lua:
 bash
-
+```
 # Установить
 brew install neovim  # macOS
 # или
 sudo apt install neovim  # Linux
-
+```
+```
 # Создать конфиг
 mkdir -p ~/.config/nvim
 cat > ~/.config/nvim/init.lua << 'EOF'
+```
+```
 -- Основные настройки
 vim.opt.number = true
 vim.opt.expandtab = true
@@ -156,12 +159,12 @@ vim.opt.shiftwidth = 4
 vim.opt.cursorline = true
 vim.cmd.colorscheme("desert")
 EOF
-
+```
 Для вашего Django проекта
 
 Добавьте в ~/.vimrc:
 vim
-
+```
 " === Django специфика ===
 autocmd FileType python,html setlocal colorcolumn=79,120
 
@@ -170,16 +173,16 @@ nnoremap <leader>t :!python manage.py test<CR>
 
 " Запуск сервера
 nnoremap <leader>s :!python manage.py runserver<CR>
-
+```
 Потом:
-bash
+```bash
 
 source ~/.bashrc
 export EDITOR=vim
-
+```
 Теперь Vim будет использоваться редактором по умолчанию! ✅
 
-что такое nnoremap
+### что такое nnoremap
 nnoremap — маппинг клавиш в Vim
 
 nnoremap — это команда для переназначения клавиш в нормальном режиме (Normal Mode) Vim.
@@ -200,7 +203,7 @@ nnoremap <leader>w :w<CR>
 Результат: При нажатии \w или ,w файл сохраняется
 Примеры
 vim
-
+```
 " Сохранить файл
 nnoremap <leader>w :w<CR>
 
@@ -352,8 +355,8 @@ vim models.py views.py serializers.py
 # Ctrl+h, Ctrl+j, Ctrl+k, Ctrl+l
 
 Это экономит кучу времени! 🎯
-
-как закрыть сплит
+```
+### как закрыть сплит
 Закрытие сплита в Vim
 
 Основные способы:
